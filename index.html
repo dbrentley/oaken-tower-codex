@@ -294,8 +294,8 @@
         <th data-sort="name">Name</th>
         <th data-sort="tags">Tags / Rarity</th>
         <th data-sort="dmg"   class="stat-h" title="Damage"><img src="sprites/spr_iconSword.png"></th>
-        <th data-sort="dps"   class="stat-h text" title="Baseline DPS at this tier: dmg × (1 + crit%/100) × (1 + multicast) / max(cd, 1.0). Default crit multiplier 2x (Sapphire raises it). Crit chance capped at 100%. Excludes Warhorn / synergy buffs.">DPS</th>
         <th data-sort="cd"    class="stat-h" title="Cooldown"><img src="sprites/spr_iconCooldown.png"></th>
+        <th data-sort="dps"   class="stat-h text" title="Baseline DPS at this tier: dmg × (1 + crit%/100) × (1 + multicast) / max(cd, 1.0). Default crit multiplier 2x (Sapphire raises it). Crit chance capped at 100%. Excludes Warhorn / synergy buffs.">DPS</th>
         <th data-sort="crit"  class="stat-h" title="Crit Chance"><img src="sprites/spr_iconCrit.png"></th>
         <th data-sort="mc"    class="stat-h" title="Multicast"><img src="sprites/spr_iconMulticast.png"></th>
         <th data-sort="ch"    class="stat-h" title="Charges"><img src="sprites/spr_iconCharges.png"></th>
@@ -566,8 +566,8 @@ function renderItems() {
       <td class="name" data-item="${r.obj}">${r.name}${isDevItem(r.name) ? '<span class="dev-badge" title="Dev/test item — internal name only, no localized name in locales/en.json. Likely a developer tool, cut content, or in-progress item left in the binary.">!</span>' : ""}</td>
       <td class="tags">${tagsHTML(r.tags, r.rarity, r.sources && r.sources.tag_source)}</td>
       <td class="num">${num(ti.dmg)}</td>
-      <td class="num">${fmtDps(calcDps(ti))}</td>
       <td class="num">${num(ti.cd)}</td>
+      <td class="num">${fmtDps(calcDps(ti))}</td>
       <td class="num">${num(ti.crit)}</td>
       <td class="num">${num(ti.mc)}</td>
       <td class="num">${num(ti.ch)}</td>
